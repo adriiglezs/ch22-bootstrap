@@ -1,48 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="/ch22-bootstrap/index.css" />
   </head>
   <body>
-    <!-- navbar -->
+    <!--Navbar -->
     <nav class="navbar navbar-expand-sm bg-body-emphasis">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="/ch22-bootstrap/assets/img/ninja-128px.png" alt="logo ninja">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" target="_blank" href="https://github.com/adriiglezs">Git Hub</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Proyectos
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Calculadora</a></li>
-                  <li><a class="dropdown-item" href="#">Calendarios</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Formulario</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Mas información</a>
-              </li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            class="logo-ninja"
+            src="/ch22-bootstrap/assets/img/ninja-128px.png"
+            alt="logo ninja"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                target="_blank"
+                href="https://github.com/adriiglezs"
+                >GitHub</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Proyectos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Calculadora</a></li>
+                <li><a class="dropdown-item" href="#">Fechas</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Formulario</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Más información</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <!-- Carousel y descripción -->
+      </div>
+    </nav>
+    <!-- Acerca de -->
+    <div class="container">
+      <div class="row">
+        <h1 class="col">Adrián González</h1>
+      </div>
+      <div class="row">
+        <p class="col-12 col-sm-4">Lic. en Ingeniería Matemática</p>
+        <p class="col-12 col-sm-4">Cargando una M. en Cs.</p>
+      </div>
+    </div>
+    <!-- Carousel y descripción -->
     <div class="container">
       <div class="row justify-content-center">
         <!-- carousel -->
@@ -121,10 +164,23 @@
         </div>
         <!-- Descripción -->
         <div class="col-10 col-sm-5">
-            Adrian se hace pato en el bootcamm Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt molestiae necessitatibus commodi corrupti esse neque suscipit sit totam maiores quis dolores minima incidunt, velit, similique reiciendis veritatis.
+            <div class="col">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt molestiae necessitatibus commodi corrupti esse neque suscipit sit totam maiores quis dolores minima incidunt, velit, similique reiciendis veritatis.
+
+            </div>
+            <div class="col text-center">
+                <button type="button" class="btn btn-dark my-2">LinkedIn</button>
+
+            </div>
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- bootstrap script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
